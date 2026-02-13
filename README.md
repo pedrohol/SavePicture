@@ -1,6 +1,6 @@
 # SavePicture
 
-Aplicativo Android desenvolvido para aplicar estudos em uso de camera e persistência de dados local, injeção de dependências e arquitetura moderna de software.
+Aplicativo Android desenvolvido para aplicar estudos em uso de câmera e persistência de dados local, injeção de dependências e arquitetura moderna de software.
 
 ## Features
 - Uso da câmera do dispositivo para tirar fotos.
