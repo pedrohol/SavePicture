@@ -7,13 +7,6 @@ Aplicativo Android desenvolvido para aplicar estudos em uso de camera e persist�
 - Sistema de persistência de dados para salvar as fotos.
 -  Exibição das fotos tiradas tiradas salvas.
 
-  
-## Screenshots
-<img
-  width = "250px"
-  src="https://i.imgur.com/QIfzlqb.jpeg"
-/>
-  
 ## Tech Stack & Arquitetura
 <li><strong>Linguagem de Programação</strong>: Kotlin.</li>
 <li><strong>Arquitetura</strong>: MVVM (Model-View-ViewModel).</li>
