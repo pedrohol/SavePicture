@@ -83,5 +83,8 @@ dependencies {
     implementation("io.insert-koin:koin-android:4.2.0-RC1")
     implementation("io.insert-koin:koin-androidx-compose:4.2.0-RC1")
 
+    // SplashScreen
+    implementation("androidx.core:core-splashscreen:1.0.1")
+
 
 }

@@ -1,4 +1,4 @@
-package com.example.savepicture
+package com.example.savepicture.main
 
 import android.app.Application
 import com.example.savepicture.di.appModule

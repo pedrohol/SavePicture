@@ -87,7 +87,6 @@ fun PictureScreen(uri: ActivityResultLauncher<Uri>, cameraViewModel: CameraViewM
 
         if(pictureList.isNotEmpty()) {
             PicturesGrid(pictureList)
-
         }
 
     }

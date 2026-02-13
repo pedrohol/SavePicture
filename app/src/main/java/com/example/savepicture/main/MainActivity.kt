@@ -1,24 +1,13 @@
-package com.example.savepicture
+package com.example.savepicture.main
 
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.activity.viewModels
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.savepicture.model.Pictures
 import com.example.savepicture.ui.theme.SavePictureTheme
 import com.example.savepicture.view.PictureScreen
-import com.example.savepicture.view.components.PicturesGrid
 import com.example.savepicture.viewModel.CameraViewModel
 import com.example.savepicture.viewModel.PicturesViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -38,6 +27,9 @@ class MainActivity : ComponentActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        installSplashScreen()
+
         super.onCreate(savedInstanceState)
         setContent {
             SavePictureTheme {
