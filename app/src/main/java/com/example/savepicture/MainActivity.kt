@@ -41,7 +41,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             SavePictureTheme {
-                PictureScreen(takePictureLauncher)
+                PictureScreen(takePictureLauncher, cameraViewModel)
             }
         }
     }
