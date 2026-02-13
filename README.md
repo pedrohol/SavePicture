@@ -8,6 +8,7 @@ Aplicativo Android desenvolvido para aplicar estudos em uso de camera e persist�
 -  Exibição das fotos tiradas tiradas salvas.
 
 ## Tech Stack & Arquitetura
+<ul>
 <li><strong>Linguagem de Programação</strong>: Kotlin.</li>
 <li><strong>Arquitetura</strong>: MVVM (Model-View-ViewModel).</li>
 <li><strong>Banco de Dados</strong>: Room Persistence Library (abstração do SQLite).</li>
