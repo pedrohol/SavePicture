@@ -51,12 +51,12 @@ import kotlin.math.log
 
 @OptIn(ExperimentalPermissionsApi::class)
 @Composable
-fun PictureScreen(uri: ActivityResultLauncher<Uri>, cameraViewModel: CameraViewModel) {
+fun PictureScreen(
+    uri: ActivityResultLauncher<Uri>,
+    cameraViewModel: CameraViewModel,
+    pictureViewModel: PicturesViewModel) {
 
-    //val cameraViewModel: CameraViewModel = viewModel()
     val photoUri by cameraViewModel.photoUri.collectAsStateWithLifecycle()
-
-    val pictureViewModel: PicturesViewModel = viewModel()
     val pictureList by pictureViewModel.pictures.collectAsStateWithLifecycle()
 
     val permissionsToRequest = mutableListOf(Manifest.permission.CAMERA).apply {
@@ -66,6 +66,8 @@ fun PictureScreen(uri: ActivityResultLauncher<Uri>, cameraViewModel: CameraViewM
             add(Manifest.permission.READ_EXTERNAL_STORAGE)
         }
     }
+
+    val multiplePermissionsState = rememberMultiplePermissionsState(permissionsToRequest)
 
     val takePictureLauncher = rememberLauncherForActivityResult(ActivityResultContracts.TakePicture()) { success ->
         if (success) {
@@ -78,8 +80,6 @@ fun PictureScreen(uri: ActivityResultLauncher<Uri>, cameraViewModel: CameraViewM
             Log.e("Camera", "Foto não capturada.")
         }
     }
-
-    val multiplePermissionsState = rememberMultiplePermissionsState(permissionsToRequest)
 
     Box(modifier = Modifier.fillMaxSize()) {
 
@@ -104,10 +104,8 @@ fun PictureScreen(uri: ActivityResultLauncher<Uri>, cameraViewModel: CameraViewM
             } else {
                 multiplePermissionsState.launchMultiplePermissionRequest()
             }
-
         }
     }
-
 }
 
 
